@@ -53,4 +53,12 @@ public class Lista {
 
         }
     }
+    public void calcResult(int [] res){
+        Apuesta aux = cabeza;
+        while (aux != null) {            
+            aux.calcularPuntos(res);
+            System.out.println("Puntos :" + aux.getPuntos());
+            aux = aux.getSiguiente();
+        }
+    }
 }

@@ -14,6 +14,7 @@ public class Apuesta {
     private String apostador;
     private double monto;
     private int [] caballos;
+    private int puntos = 0;
 
     public Apuesta(Apuesta siguiente, Apuesta anterior, String apostador) {
         this.siguiente = siguiente;
@@ -70,6 +71,14 @@ public class Apuesta {
         this.caballos = caballos;
     }
 
+    public int getPuntos() {
+        return puntos;
+    }
+
+    public void setPuntos(int puntos) {
+        this.puntos = puntos;
+    }
+
     @Override
     public String toString() {
         for (int i = 0; i < caballos.length; i++) {
@@ -78,6 +87,17 @@ public class Apuesta {
         return "Apuesta{" + "apostador=" + apostador + ", monto=" + monto;
        
     }
+    public void calcularPuntos(int [] res){
+        for (int i = 0; i < caballos.length; i++) {
+            if(caballos[i] == res [i]){
+                puntos = puntos +(10-i);
+            }
+        }
+    }
+   public void eliminar (){
+       
+   }
+            
     
     
 

@@ -50,7 +50,7 @@ public class Lista {
         int i = 0;
         Apuesta aux = cabeza;
         while (aux != null) {
-            System.out.println(i + "-" + aux.toString());
+            System.out.println(i + "-" + aux.getApostador() + "   " + aux.getPuntos());
             aux = aux.getSiguiente();
             i++;
         }
@@ -63,7 +63,7 @@ public class Lista {
             aux = aux.getSiguiente();
         }
     }
-   
+
     public void verificarApuesta(Apuesta apuesta) {
         if (apuesta != null) {
             if (verificarRepeticion(apuesta.getCaballos())) {
@@ -73,7 +73,8 @@ public class Lista {
             }
         }
     }
-public boolean verificarRepeticion(int[] a) {
+
+    public boolean verificarRepeticion(int[] a) {
         boolean error = false;
         boolean c1 = false;
         boolean c2 = false;
@@ -162,6 +163,7 @@ public boolean verificarRepeticion(int[] a) {
         }
         return error;
     }
+
     public void eliminarApuesta(Apuesta eliminar) {//o(n)
         if (eliminar != cabeza && eliminar != utlimo) {
             if (eliminar.getSiguiente() != null) {
@@ -204,6 +206,27 @@ public boolean verificarRepeticion(int[] a) {
         }
     }
 
+    public int tamaneo() {
+        int i = 0;
+        Apuesta aux = cabeza;
+        while (aux != null) {
+            aux = aux.getSiguiente();
+            i++;
+        }
+        System.out.println("tamaneo: "+i);
+        return i;
+    }
+    public Apuesta [] arreglo (){
+        Apuesta salida [] = new Apuesta[tamaneo()];
+        Apuesta aux = cabeza;
+        int i = 0;
+        while (aux != null) {
+            salida[i] = aux;
+            aux = aux.getSiguiente();
+            i++;
+        }
+        return salida;
+    }
     public Apuesta getCabeza() {
         return cabeza;
     }

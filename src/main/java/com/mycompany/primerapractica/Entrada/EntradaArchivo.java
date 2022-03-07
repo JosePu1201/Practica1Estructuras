@@ -21,7 +21,7 @@ import javax.swing.JTextArea;
  */
 public class EntradaArchivo {
 
-    JTextArea texto;
+    private JTextArea texto;
     private Lista lista;
 
     public EntradaArchivo(JTextArea texto) {

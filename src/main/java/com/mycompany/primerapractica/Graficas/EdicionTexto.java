@@ -5,9 +5,7 @@
 package com.mycompany.primerapractica.Graficas;
 
 import com.mycompany.primerapractica.Entrada.EntradaArchivo;
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import javax.swing.JTextArea;
 
 /**
  *
@@ -18,8 +16,10 @@ public class EdicionTexto extends javax.swing.JPanel {
     /**
      * Creates new form EdicionTexto
      */
+    private panelPrincipal panel;
     private EntradaArchivo nuevo;
-    public EdicionTexto() {
+    public EdicionTexto(panelPrincipal panel) {
+        this.panel = panel;
         initComponents();
          nuevo = new EntradaArchivo(jTextArea2);
     }
@@ -33,26 +33,10 @@ public class EdicionTexto extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        cierre = new javax.swing.JButton();
-        cargar = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
 
         setBackground(new java.awt.Color(0, 0, 255));
-
-        cierre.setText("Cerrar apuestas");
-        cierre.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cierreActionPerformed(evt);
-            }
-        });
-
-        cargar.setText("Cargar archivo de entrada");
-        cargar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cargarActionPerformed(evt);
-            }
-        });
 
         jTextArea2.setColumns(20);
         jTextArea2.setRows(5);
@@ -62,48 +46,34 @@ public class EdicionTexto extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(244, 244, 244)
-                        .addComponent(cierre, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(259, 259, 259)
-                        .addComponent(cargar, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 772, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(42, Short.MAX_VALUE))
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 849, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addComponent(cargar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 490, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
-                .addComponent(cierre)
-                .addGap(27, 27, 27))
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 678, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void cargarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cargarActionPerformed
-        try {            
-            nuevo.cargaDatos();                    
-        } catch (IOException ex) {            
-        }
-    }//GEN-LAST:event_cargarActionPerformed
-
-    private void cierreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cierreActionPerformed
-        nuevo.generarListas();
-    }//GEN-LAST:event_cierreActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton cargar;
-    private javax.swing.JButton cierre;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea jTextArea2;
     // End of variables declaration//GEN-END:variables
+
+    public panelPrincipal getPanel() {
+        return panel;
+    }
+
+    public void setPanel(panelPrincipal panel) {
+        this.panel = panel;
+    }
+
+    public JTextArea getjTextArea2() {
+        return jTextArea2;
+    }
+
+    public void setjTextArea2(JTextArea jTextArea2) {
+        this.jTextArea2 = jTextArea2;
+    }
+
 }

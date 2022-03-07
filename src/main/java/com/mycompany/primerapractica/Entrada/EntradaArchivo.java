@@ -77,15 +77,15 @@ public class EntradaArchivo {
 
                     }
                 } catch (Exception a) {
-                    System.out.println("Error Double");
+                    
                 }
 
             }
         }
     }
 
-    public static Apuesta[] PorSeleccion(Apuesta [] a) { //O(n^2)
-        Apuesta bc [] =a;
+    public static Apuesta[] PorSeleccion(Apuesta[] a) { //O(n^2)
+        Apuesta bc[] = a;
         Apuesta aux;
         Apuesta aux2;
         for (int i = 0; i < bc.length; i++) {
@@ -99,8 +99,6 @@ public class EntradaArchivo {
             }
             bc[i] = aux;
 
-            
-
         }
         return bc;
 
@@ -112,8 +110,7 @@ public class EntradaArchivo {
             salida = Integer.parseInt(e);
         } catch (Exception a) {
             salida = -1;
-            System.out.println("Error: " + e);
-        }
+                    }
         return salida;
     }
 

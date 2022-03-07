@@ -18,10 +18,11 @@ public class EdicionTexto extends javax.swing.JPanel {
      */
     private panelPrincipal panel;
     private EntradaArchivo nuevo;
+
     public EdicionTexto(panelPrincipal panel) {
         this.panel = panel;
         initComponents();
-         nuevo = new EntradaArchivo(jTextArea2);
+        nuevo = new EntradaArchivo(jTextArea2);
     }
 
     /**
@@ -53,7 +54,6 @@ public class EdicionTexto extends javax.swing.JPanel {
             .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 678, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane jScrollPane2;

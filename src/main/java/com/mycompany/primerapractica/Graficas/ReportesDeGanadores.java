@@ -19,7 +19,8 @@ import javax.swing.table.DefaultTableModel;
 public class ReportesDeGanadores extends javax.swing.JFrame {
 
     private DefaultTableModel modelo;
-    private Apuesta [] puesta; 
+    private Apuesta[] puesta;
+
     /**
      * Creates new form ReportesDeGanadores
      */
@@ -120,25 +121,24 @@ public class ReportesDeGanadores extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-            this.setVisible(false);
+        this.setVisible(false);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-    JFileChooser guardarComo = new JFileChooser();
+        JFileChooser guardarComo = new JFileChooser();
         guardarComo.setApproveButtonText("Guardar");
         guardarComo.showSaveDialog(null);
-        File archivo = new File(guardarComo.getSelectedFile()+".txt");
-        try{
+        File archivo = new File(guardarComo.getSelectedFile() + ".txt");
+        try {
             BufferedWriter salida = new BufferedWriter(new FileWriter(archivo));
-            salida.append(("Numero")+"\tApostador\tPuntos\tMonto");
-            for (int i = puesta.length-1; i >= 0 ; i--) {
+            salida.append(("Numero") + "\t\t\tApostador\t\t\tPuntos\t\t\tMonto");
+            for (int i = puesta.length - 1; i >= 0; i--) {
                 salida.newLine();
-                salida.append((i+1)+"\t"+puesta[i].getApostador()+"\t"+puesta[i].getPuntos() +"\t"+puesta[i].getMonto());
+                salida.append((i + 1) + "\t\t\t" + puesta[i].getApostador() + "\t\t\t" + puesta[i].getPuntos() + "\t\t\t" + puesta[i].getMonto());
             }
             salida.close();
-        }
-        catch(Exception a){
-        
+        } catch (Exception a) {
+
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -146,25 +146,23 @@ public class ReportesDeGanadores extends javax.swing.JFrame {
         JFileChooser guardarComo = new JFileChooser();
         guardarComo.setApproveButtonText("Guardar");
         guardarComo.showSaveDialog(null);
-        File archivo = new File(guardarComo.getSelectedFile()+".txt");
-        try{
+        File archivo = new File(guardarComo.getSelectedFile() + ".txt");
+        try {
             BufferedWriter salida = new BufferedWriter(new FileWriter(archivo));
-            salida.append(("Numero")+"\tApostador\tPuntos\tMonto");
+            salida.append(("Numero") + "\t\t\tApostador\t\t\tPuntos\t\t\tMonto");
             for (int i = 0; i < puesta.length; i++) {
                 salida.newLine();
-                salida.append((i+1)+"\t"+puesta[i].getApostador()+"\t"+puesta[i].getPuntos() +"\t"+puesta[i].getMonto());
+                salida.append((i + 1) + "\t\t\t" + puesta[i].getApostador() + "\t\t\t" + puesta[i].getPuntos() + "\t\t\t" + puesta[i].getMonto());
             }
             salida.close();
-        }
-        catch(Exception a){
-        
+        } catch (Exception a) {
+
         }
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
      */
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;

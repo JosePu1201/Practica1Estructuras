@@ -12,6 +12,7 @@ import javax.swing.JFrame;
  * @author jose
  */
 public class Main {
+
     //main
     public static void main(String[] args) {
         FramePrincipal nuevo = new FramePrincipal();

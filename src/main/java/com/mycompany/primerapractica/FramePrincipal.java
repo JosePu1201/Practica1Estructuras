@@ -11,13 +11,15 @@ import com.mycompany.primerapractica.Graficas.EdicionTexto;
  * @author jose
  */
 public class FramePrincipal extends javax.swing.JFrame {
+
     private EdicionTexto edicion;
+
     /**
      * Creates new form FramePrincipal
      */
     public FramePrincipal() {
         initComponents();
-       
+
     }
 
     /**
@@ -50,8 +52,6 @@ public class FramePrincipal extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.mycompany.primerapractica.Graficas.panelPrincipal panelPrincipal1;
     // End of variables declaration//GEN-END:variables

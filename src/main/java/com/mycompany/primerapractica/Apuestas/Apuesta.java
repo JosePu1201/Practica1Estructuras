@@ -9,11 +9,12 @@ package com.mycompany.primerapractica.Apuestas;
  * @author jose
  */
 public class Apuesta {
+
     private Apuesta siguiente;
     private Apuesta anterior;
     private String apostador;
     private double monto;
-    private int [] caballos;
+    private int[] caballos;
     private int puntos = 0;
 
     public Apuesta(Apuesta siguiente, Apuesta anterior, String apostador) {
@@ -27,9 +28,6 @@ public class Apuesta {
         this.monto = motno;
         this.caballos = caballos;
     }
-
-
-
 
     public Apuesta getSiguiente() {
         return siguiente;
@@ -81,25 +79,24 @@ public class Apuesta {
 
     @Override
     public String toString() {
+        String arreglo = "   Arreglo -->";
         for (int i = 0; i < caballos.length; i++) {
-            System.out.print(caballos[i]+" ");
+           arreglo = arreglo+caballos[i]+"-";
         }
-        return "Apuesta{" + "apostador=" + apostador + ", monto=" + monto;
-       
+        return "Apostador: " + apostador + "Monto: " + monto+arreglo;
+
     }
-    public void calcularPuntos(int [] res){
+
+    public void calcularPuntos(int[] res) {
         for (int i = 0; i < caballos.length; i++) {
-            if(caballos[i] == res [i]){
-                puntos = puntos +(10-i);
+            if (caballos[i] == res[i]) {
+                puntos = puntos + (10 - i);
             }
         }
     }
-   public void eliminar (){
-       
-   }
-            
-    
-    
 
-    
+    public void eliminar() {
+
+    }
+
 }

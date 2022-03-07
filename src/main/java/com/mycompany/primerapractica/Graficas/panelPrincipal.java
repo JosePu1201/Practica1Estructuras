@@ -17,13 +17,14 @@ import javax.swing.JPanel;
  * @author Sammy Guergachi <sguergachi at gmail.com>
  */
 public class panelPrincipal extends JPanel {
+
     private EntradaArchivo funciones;
     private Botones derecha;
     private EdicionTexto centro;
     private ApuestaManual izquierda;
 
-    public panelPrincipal() {        
-        derecha = new Botones (this);
+    public panelPrincipal() {
+        derecha = new Botones(this);
         derecha.setVisible(true);
         derecha.setBackground(Color.BLACK);
         izquierda = new ApuestaManual(this);
@@ -85,7 +86,6 @@ public class panelPrincipal extends JPanel {
         this.izquierda = izquierda;
         this.izquierda.setVisible(true);
     }
-
 
     public void agregarTabala() {
 //        this.add(reporte, BorderLayout.CENTER);

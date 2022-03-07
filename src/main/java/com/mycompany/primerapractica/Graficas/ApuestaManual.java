@@ -11,8 +11,10 @@ import javax.swing.JOptionPane;
  * @author jose
  */
 public class ApuestaManual extends javax.swing.JPanel {
+
     private panelPrincipal panel;
-    private int [] apuestas = new int[10];
+    private int[] apuestas = new int[10];
+
     /**
      * Creates new form ApuestaManual
      */
@@ -337,26 +339,24 @@ public class ApuestaManual extends javax.swing.JPanel {
     }//GEN-LAST:event_p7ActionPerformed
 
     private void confirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarActionPerformed
-        
-        apuestas [0] = Integer.parseInt((String) p1.getSelectedItem());
-        apuestas [1] = Integer.parseInt((String) p2.getSelectedItem());
-        apuestas [2] = Integer.parseInt((String) p3.getSelectedItem());
-        apuestas [3] = Integer.parseInt((String) p4.getSelectedItem());
-        apuestas [4] = Integer.parseInt((String) p5.getSelectedItem());
-        apuestas [5] = Integer.parseInt((String) p6.getSelectedItem());
-        apuestas [6] = Integer.parseInt((String) p7.getSelectedItem());
-        apuestas [7] = Integer.parseInt((String) p8.getSelectedItem());
-        apuestas [8] = Integer.parseInt((String) p9.getSelectedItem());
-        apuestas [9] = Integer.parseInt((String) p10.getSelectedItem());
-        if(panel.getFunciones().getLista().verificarRepeticion(apuestas)){
+
+        apuestas[0] = Integer.parseInt((String) p1.getSelectedItem());
+        apuestas[1] = Integer.parseInt((String) p2.getSelectedItem());
+        apuestas[2] = Integer.parseInt((String) p3.getSelectedItem());
+        apuestas[3] = Integer.parseInt((String) p4.getSelectedItem());
+        apuestas[4] = Integer.parseInt((String) p5.getSelectedItem());
+        apuestas[5] = Integer.parseInt((String) p6.getSelectedItem());
+        apuestas[6] = Integer.parseInt((String) p7.getSelectedItem());
+        apuestas[7] = Integer.parseInt((String) p8.getSelectedItem());
+        apuestas[8] = Integer.parseInt((String) p9.getSelectedItem());
+        apuestas[9] = Integer.parseInt((String) p10.getSelectedItem());
+        if (panel.getFunciones().getLista().verificarRepeticion(apuestas)) {
             JOptionPane.showMessageDialog(null, "Cada lugar lo debe de ocupar un caballo diferente");
-        }
-        else{
+        } else {
             panel.getFunciones().getLista().calcResult(apuestas);
             panel.getIzquierda().setVisible(false);
         }
     }//GEN-LAST:event_confirmarActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel c1;

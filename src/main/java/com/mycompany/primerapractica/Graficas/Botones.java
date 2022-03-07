@@ -86,6 +86,11 @@ public class Botones extends javax.swing.JPanel {
         add(mostrar);
 
         jButton1.setText("REPORTES");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         add(jButton1);
 
         limpiar.setText("LIMPIAR AREA DE TEXTO");
@@ -114,7 +119,6 @@ public class Botones extends javax.swing.JPanel {
 
     private void verificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verificarActionPerformed
         panel.getFunciones().getLista().verificarApuesta(panel.getFunciones().getLista().getCabeza());
-        panel.getFunciones().getLista().imprimir();
         ingresar.setEnabled(true);
     }//GEN-LAST:event_verificarActionPerformed
 
@@ -125,10 +129,7 @@ public class Botones extends javax.swing.JPanel {
     }//GEN-LAST:event_ingresarActionPerformed
 
     private void mostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mostrarActionPerformed
-        Apuesta [] nuevo = EntradaArchivo.PorSeleccion(panel.getFunciones().getLista().arreglo());
-        for (Apuesta apuesta : nuevo) {
-            System.out.println(apuesta.toString());
-        }
+        Apuesta[] nuevo = EntradaArchivo.PorSeleccion(panel.getFunciones().getLista().arreglo());
         ReportesDeGanadores reportes = new ReportesDeGanadores(nuevo);
     }//GEN-LAST:event_mostrarActionPerformed
 
@@ -136,6 +137,9 @@ public class Botones extends javax.swing.JPanel {
         panel.getCentro().getjTextArea2().setText("");
     }//GEN-LAST:event_limpiarActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        System.out.println(panel.getFunciones().getLista().getErrores());
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton carga;

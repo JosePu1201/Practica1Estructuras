@@ -14,12 +14,7 @@ import javax.swing.JFrame;
 public class Main {
     //main
     public static void main(String[] args) {
-        EdicionTexto edicion = new  EdicionTexto();
-        edicion.setVisible(true);
-        JFrame nuevo = new JFrame();
-        nuevo.setSize(500,500);
-        nuevo.setLocationRelativeTo(null);
-        nuevo.add(edicion);
+        FramePrincipal nuevo = new FramePrincipal();
         nuevo.setVisible(true);
     }
 }

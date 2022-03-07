@@ -82,9 +82,6 @@ public class EntradaArchivo {
 
             }
         }
-        int[] res = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        lista.calcResult(res);
-
     }
 
     private int casteoInt(String e) {
@@ -97,97 +94,7 @@ public class EntradaArchivo {
         }
         return salida;
     }
-
-    public boolean verificarApuestas(int[] a) {
-        boolean error = false;
-        boolean c1 = false;
-        boolean c2 = false;
-        boolean c3 = false;
-        boolean c4 = false;
-        boolean c5 = false;
-        boolean c6 = false;
-        boolean c7 = false;
-        boolean c8 = false;
-        boolean c9 = false;
-        boolean c10 = false;
-        for (int i = 0; i < a.length; i++) {
-            switch (a[i]) {
-                case 1:
-                    if (!c1) {
-                        c1 = true;
-                    } else {
-                        error = true;
-                    }
-                    break;
-                case 2:
-                    if (!c2) {
-                        c2 = true;
-                    } else {
-                        error = true;
-                    }
-                    break;
-                case 3:
-                    if (!c3) {
-                        c3 = true;
-                    } else {
-                        error = true;
-                    }
-                    break;
-                case 4:
-                    if (!c4) {
-                        c4 = true;
-                    } else {
-                        error = true;
-                    }
-                    break;
-                case 5:
-                    if (!c5) {
-                        c5 = true;
-                    } else {
-                        error = true;
-                    }
-                    break;
-                case 6:
-                    if (!c6) {
-                        c6 = true;
-                    } else {
-                        error = true;
-                    }
-                    break;
-                case 7:
-                    if (!c7) {
-                        c7 = true;
-                    } else {
-                        error = true;
-                    }
-                    break;
-                case 8:
-                    if (!c8) {
-                        c8 = true;
-                    } else {
-                        error = true;
-                    }
-                    break;
-                case 9:
-                    if (!c9) {
-                        c9 = true;
-                    } else {
-                        error = true;
-                    }
-                    break;
-                case 10:
-                    if (!c10) {
-                        c10 = true;
-                    } else {
-                        error = true;
-                    }
-                    break;
-
-            }
-        }
-        return error;
-    }
-
+    
     public JTextArea getTexto() {
         return texto;
     }

@@ -1,0 +1,138 @@
+ //Agregar  Apuesta a una lista 
+     public void agregarPrincipio(Apuesta nuevo) {         /* O(1) */
+        if (cabeza == null) {                       1
+            cabeza = nuevo;                                     
+            utlimo = nuevo;                         
+        } else {                                    1
+            Apuesta aux = cabeza;
+            Apuesta aux1 = cabeza.getSiguiente();
+            cabeza = nuevo;
+            aux.setAnterior(cabeza);
+            aux.setSiguiente(aux1);
+            cabeza.setSiguiente(aux);
+//            aux.getAnterior().setSiguiente(aux);        
+        }
+
+    }  
+
+//Verificacion de apuestas 
+public boolean verificarRepeticion(int[] a) {
+        boolean error = false;
+        boolean c1 = false;                     1
+        boolean c2 = false;                     1
+        boolean c3 = false;                     1
+        boolean c4 = false;                     1
+        boolean c5 = false;                     1
+        boolean c6 = false;                     1
+        boolean c7 = false;                     1
+        boolean c8 = false;                     1
+        boolean c9 = false;                     1
+        boolean c10 = false;                    1
+        for (int i = 0; i < a.length; i++) {    1+n()+1
+            switch (a[i]) {
+                case 1:                             1
+                    if (!c1) {                      
+                        c1 = true;
+                    } else {
+                        error = true;
+                    }
+                    break;
+                case 2:                             1
+                    if (!c2) {
+                        c2 = true;
+                    } else {
+                        error = true;
+                    }
+                    break;
+                case 3:                             1
+                    if (!c3) {
+                        c3 = true;
+                    } else {
+                        error = true;
+                    }
+                    break;
+                case 4:                             1
+                    if (!c4) {
+                        c4 = true;
+                    } else {
+                        error = true;
+                    }
+                    break;
+                case 5:                             1
+                    if (!c5) {
+                        c5 = true;
+                    } else {
+                        error = true;
+                    }
+                    break;
+                case 6:                             1
+                    if (!c6) {
+                        c6 = true;
+                    } else {
+                        error = true;
+                    }
+                    break;
+                case 7:                             1
+                    if (!c7) {
+                        c7 = true;
+                    } else {
+                        error = true;
+                    }
+                    break;  
+                case 8:                             1
+                    if (!c8) {
+                        c8 = true;
+                    } else {
+                        error = true;
+                    }
+                    break;
+                case 9:                             1
+                    if (!c9) {
+                        c9 = true;
+                    } else {
+                        error = true;
+                    }
+                    break;
+                case 10:                            1
+                    if (!c10) {
+                        c10 = true;
+                    } else {
+                        error = true;
+                    }
+                    break;
+
+            }                                       1+n(10)+1+4 = 6+10n = /* O(n) */
+        }
+        return error;
+    }
+//Calculo de los resultados al final de la carrera
+
+    public void calcularPuntos(int [] res){
+        for (int i = 0; i < caballos.length; i++) {     1+1+n
+            if(caballos[i] == res [i]){                 1
+                puntos = puntos +(10-i);
+            }                                           2+n = /* O(n) */   
+        }
+    }
+//Ordenamiento de Resultados 
+    public static Apuesta[] PorSeleccion(Apuesta [] a) { //O(n^2)
+        Apuesta bc [] =a;                                               1
+        Apuesta aux;                                                    1
+        Apuesta aux2;                                                   1   
+        for (int i = 0; i < bc.length; i++) {                           1+n()
+            aux = bc[i];                                                    1
+            for (int j = i + 1; j < bc.length; j++) {                       1+n
+                if (aux.getPuntos() >= bc[j].getPuntos()) {                 1 
+                    aux2 = aux;                                             1            
+                    aux = bc[j];                                            1
+                    bc[j] = aux2;                                           1
+                }
+            }
+            bc[i] = aux;                                                     1  = 7+n      
+                                                                        4+n(7+n) = 4+7n+n^2 = n^2  =/* O(n^2) */
+            
+
+        }
+        return bc;
+
+    }

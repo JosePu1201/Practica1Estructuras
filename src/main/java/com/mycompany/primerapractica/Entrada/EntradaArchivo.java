@@ -84,6 +84,28 @@ public class EntradaArchivo {
         }
     }
 
+    public static Apuesta[] PorSeleccion(Apuesta [] a) { //O(n^2)
+        Apuesta bc [] =a;
+        Apuesta aux;
+        Apuesta aux2;
+        for (int i = 0; i < bc.length; i++) {
+            aux = bc[i];
+            for (int j = i + 1; j < bc.length; j++) {
+                if (aux.getPuntos() >= bc[j].getPuntos()) {
+                    aux2 = aux;
+                    aux = bc[j];
+                    bc[j] = aux2;
+                }
+            }
+            bc[i] = aux;
+
+            
+
+        }
+        return bc;
+
+    }
+
     private int casteoInt(String e) {
         int salida = 0;
         try {
@@ -94,7 +116,7 @@ public class EntradaArchivo {
         }
         return salida;
     }
-    
+
     public JTextArea getTexto() {
         return texto;
     }

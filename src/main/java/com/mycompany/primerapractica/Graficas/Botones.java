@@ -5,6 +5,7 @@
 package com.mycompany.primerapractica.Graficas;
 
 import com.mycompany.primerapractica.Apuestas.Apuesta;
+import com.mycompany.primerapractica.Entrada.EntradaArchivo;
 
 /**
  *
@@ -124,7 +125,7 @@ public class Botones extends javax.swing.JPanel {
     }//GEN-LAST:event_ingresarActionPerformed
 
     private void mostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mostrarActionPerformed
-        Apuesta [] nuevo = panel.getFunciones().getLista().arreglo();
+        Apuesta [] nuevo = EntradaArchivo.PorSeleccion(panel.getFunciones().getLista().arreglo());
         for (Apuesta apuesta : nuevo) {
             System.out.println(apuesta.toString());
         }
